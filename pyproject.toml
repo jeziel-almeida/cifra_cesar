@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "cifra-cesar"
+version = "0.1.0"
+description = "Implementação da cifra de cesar"
+authors = ["Jeziel Almeida <jeziel.almeida16@gmail.com>"]
+readme = "README.md"
+packages = [{include = "cifra_cesar"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
