@@ -1,10 +1,16 @@
-from cifra_cesar import encripta, decripta
 from argparse import ArgumentParser
 
+from cifra_cesar import decripta, encripta
+
 parser = ArgumentParser(description='Cifra de Cesar')
-parser.add_argument('frase', help='Frase a ser encriptada/decriptada', type=str)
-parser.add_argument('-n', help='Valor de rotação', default=13, type=int, required=False)
+parser.add_argument(
+    'frase', help='Frase a ser encriptada/decriptada', type=str
+)
+parser.add_argument(
+    '-n', help='Valor de rotação', default=13, type=int, required=False
+)
 parser.add_argument('-d', help='Decripta', required=False, action='store_true')
+
 
 def cli():
     args = parser.parse_args()
@@ -15,5 +21,6 @@ def cli():
 
     print(f'Entrada: {args.frase}')
     print(f'Saída: {resultado}')
+
 
 cli()
